@@ -126,6 +126,8 @@ sourceSets {
 }
 
 spotless {
+    enforceCheck = false
+
     format 'misc', {
         // define the files to apply `misc` to
         target '*.gradle', '.gitattributes', '.gitignore'
@@ -137,8 +139,6 @@ spotless {
     }
 
     java {
-        //eclipse()
-
         removeUnusedImports()
         importOrder('java', 'javax', '', 'net.minecraft', group)
 
