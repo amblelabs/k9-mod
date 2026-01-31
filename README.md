@@ -79,7 +79,7 @@ Recommended to have 8GB of RAM **allocated** to the multiplayer servers.
 </h2>
 
 
-<a href="https://github.com/amblelabs/k9/tree/1.20.1-correct-fabric" style="text-decoration: none; color: inherit; display: inline-block; margin: 0 8px;">GitHub</a>
+<a href="https://github.com/amblelabs/k9-mod" style="text-decoration: none; color: inherit; display: inline-block; margin: 0 8px;">GitHub</a>
 <span style="display: inline-block; margin: 0 4px;">•</span>
 <a href="https://www.curseforge.com/minecraft/mc-mods/k9" style="text-decoration: none; color: inherit; display: inline-block; margin: 0 8px;">CurseForge</a>
 <span style="display: inline-block; margin: 0 4px;">•</span>
