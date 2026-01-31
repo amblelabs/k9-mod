@@ -1,26 +1,32 @@
 {
 	"schemaVersion": 1,
-	"id": "template-mod",
+	"id": "k9",
 	"version": "${version}",
-	"name": "Template Mod",
+	"name": "K9",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Loqor, AmbleLabs"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/template-mod/icon.png",
+	"license": "GPL-3.0",
+	"icon": "assets/k9/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.TemplateMod"
+			"dev.amble.K9Mod"
+		],
+		"client": [
+			"dev.amble.client.K9ModClient"
+		],
+		"fabric-datagen": [
+			"dev.amble.core.datagen.K9ModDataGenerator"
 		]
 	},
 	"mixins": [
-		"template-mod.mixins.json"
+		"k9.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",

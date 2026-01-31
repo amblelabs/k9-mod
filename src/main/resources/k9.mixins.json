@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "com.example.mixin",
+	"package": "dev.amble.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 
