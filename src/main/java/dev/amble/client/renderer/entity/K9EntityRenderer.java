@@ -16,6 +16,7 @@ import net.minecraft.util.Identifier;
 public class K9EntityRenderer extends MobEntityRenderer<K9Entity, K9EntityModel<K9Entity>> {
     private static final Identifier DEFAULT_TEXTURE = new Identifier(K9Mod.MOD_ID, "textures/entity/k9.png");
     private static final Identifier SCARF_TEXTURE = new Identifier(K9Mod.MOD_ID, "textures/entity/k9_scarf.png");
+    private static final Identifier BLUE_TEXTURE = new Identifier(K9Mod.MOD_ID, "textures/entity/k9_blue.png");
     private static final Identifier GLOW_TEXTURE = new Identifier(K9Mod.MOD_ID, "textures/entity/k9_emission.png");
 
     public K9EntityRenderer(EntityRendererFactory.Context context) {
@@ -38,6 +39,9 @@ public class K9EntityRenderer extends MobEntityRenderer<K9Entity, K9EntityModel<
 
         if (k9Entity.hasCustomName() && "bugger".equals(k9Entity.getName().getString())) {
             return SCARF_TEXTURE;
+        }
+        if (k9Entity.hasCustomName() && "adventure".equals(k9Entity.getName().getString())) {
+            return BLUE_TEXTURE;
         }
 
         return DEFAULT_TEXTURE;

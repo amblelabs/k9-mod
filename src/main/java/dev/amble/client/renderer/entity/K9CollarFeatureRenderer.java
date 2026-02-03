@@ -30,6 +30,7 @@ public class K9CollarFeatureRenderer
         }
 
         if (k9Entity.hasCustomName() && "bugger".equals(k9Entity.getName().getString())) return; // Return so we can render the texture with the SCARF on it
+        if (k9Entity.hasCustomName() && "advanture".equals(k9Entity.getName().getString())) return; // Blue texture
 
         float[] fs = k9Entity.getCollarColor().getColorComponents();
         K9CollarFeatureRenderer.renderModel(this.getContextModel(), SKIN, matrixStack, vertexConsumerProvider, i, k9Entity, fs[0], fs[1], fs[2]);
