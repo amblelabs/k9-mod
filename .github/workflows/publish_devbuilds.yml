@@ -43,7 +43,10 @@ jobs:
           key: datagen-${{ github.run_id }}
           restore-keys:
             datagen-
-
+            
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+        
       - name: Run DataGen
         run: ./gradlew --configuration-cache runDatagen
 
