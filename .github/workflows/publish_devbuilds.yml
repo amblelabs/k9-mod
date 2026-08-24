@@ -57,9 +57,6 @@ jobs:
           path: src/main/generated
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
 
-      - name: Make Gradle wrapper executable
-        run: chmod +x ./gradlew
-
       - name: Build
         run: ./gradlew --configuration-cache build
 
