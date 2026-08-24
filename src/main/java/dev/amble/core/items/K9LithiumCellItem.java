@@ -93,6 +93,7 @@ public class K9LithiumCellItem extends Item {
             //}
             tooltip.add(1, textifiedBlockAmount.formatted(Formatting.AQUA));
         }*/
+        tooltip.add(Text.literal("right click on a redstone block to charge it"));
         NbtCompound nbtCompound = stack.getNbt();
 
         String[] wholeBlockPattern = {"█", "█", "█", "█", "█", "█", "█", "█", "█", "█"};
@@ -118,11 +119,11 @@ public class K9LithiumCellItem extends Item {
             }
 
             MutableText textifiedBlockAmount = remainingBlocks > 0 ? Text.literal(tooltipString.toString()) : Text.literal("░░░░░░░░░░░");
-            tooltip.add(1, textifiedBlockAmount.formatted(remainingBlocks > 0 ? Formatting.AQUA : Formatting.RED));
+            tooltip.add(textifiedBlockAmount.formatted(remainingBlocks > 0 ? Formatting.AQUA : Formatting.RED));
             /*assert MinecraftClient.getInstance().currentScreen != null;
             if (MinecraftClient.getInstance().currentScreen.keyPressed(GLFW.GLFW_KEY_LEFT_SHIFT, GLFW.glfwGetKeyScancode(GLFW.GLFW_KEY_LEFT_SHIFT), 0))*/
             if (MinecraftClient.getInstance().options.advancedItemTooltips)
-                tooltip.add(2, remainingBlocks > 0 ? Text.translatable(BATTERY_KEY + " Level: " + remainingBlocks + "0%").formatted(Formatting.GREEN) : Text.translatable("Battery Depleted!").formatted(Formatting.GOLD));
+                tooltip.add(remainingBlocks > 0 ? Text.translatable(BATTERY_KEY + " Level: " + remainingBlocks + "0%").formatted(Formatting.GREEN) : Text.translatable("Battery Depleted!").formatted(Formatting.GOLD));
         }
     }
 

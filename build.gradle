@@ -24,10 +24,10 @@ repositories {
 
     // AmbleKit
     maven {
-        url "https://amblelabs.dev/maven"
+        url "https://maven.amblelabs.dev"
 
         content {
-            includeGroup "dev.amble"
+            includeGroup "dev.amblelabs"
         }
     }
 
@@ -52,7 +52,7 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modApi("dev.amble:lib:${project.amblekit_version}") {
+    modApi("dev.amblelabs:modkit:${project.amblekit_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
     modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
