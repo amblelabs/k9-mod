@@ -82,9 +82,14 @@ java {
 }
 
 jar {
-    from("LICENSE") {
-        rename { "${it}_${project.base.archivesName.get()}"}
+    def archivesNameResolved = project.base.archivesName.get()
+
+    jar {
+        from("LICENSE") {
+            rename { "${it}_${archivesNameResolved}" }
+        }
     }
+
 }
 
 // configure the maven publication
